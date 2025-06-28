@@ -1,8 +1,6 @@
 /*
 Stadium allocator - can use with std::vector<T, stad_alloc<T>>
 */
-
-#include <iostream>
 #include <print>
 
 template <typename T>
@@ -10,7 +8,7 @@ struct stad_alloc {
   using value_type = T;
 
   stad_alloc() {
-    std::cout << "Default stad_alloc<" << typeid(T).name() << ">\n";
+    std::println("Default stad_alloc<{}>", typeid(T).name());
   }
 
   template <typename U>

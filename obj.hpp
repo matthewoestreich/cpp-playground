@@ -9,7 +9,7 @@ https://www.youtube.com/shorts/g3omP2v7O88
 
 class obj {
  public:
-  obj() { std::cout << "called default ctor : 1" << "\n"; }
+  obj() { std::cout << "called default ctor : 1\n"; }
 
   obj(const obj&) { std::cout << "called copy ctor : 2\n"; }
 

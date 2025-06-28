@@ -1,14 +1,11 @@
-#include <iostream>
 #include <vector>
 
+#include "stad_alloc.hpp"
+
 int main() {
-  std::vector<int> iv;
-  iv.reserve(3);
-  for (size_t i = 1; i <= 100; ++i) {
-    iv.push_back(i);
+  std::vector<int, stad_alloc<int>> v{1};
+  for (size_t i = 10; i <= 100; ++i) {
+    v.push_back(i);
   }
-  iv.reserve(2);
-  std::cout << iv[0] << "," << iv[1] << "," << iv[2] << "," << iv[3] << ","
-            << iv[4] << "\n";
   return 0;
 }
